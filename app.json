@@ -1,4 +1,5 @@
 {
+  // 配置所有的页面
   "pages":[
     "pages/index/index",
     "pages/logs/logs"
