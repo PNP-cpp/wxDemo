@@ -1,6 +1,2 @@
 {
-  "usingComponents": {
-    "navigationBar":"../../components/navigationBar/navigayionBar",
-    "scroll": "../../components/scroll/scroll"
-    }
 }

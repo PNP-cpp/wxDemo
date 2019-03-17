@@ -15,7 +15,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    height: app.globalData.getMenuButtonBoundingClientRect.bottom
+    height: app.globalData.getMenuButtonBoundingClientRect.bottom +'px'
   },
 
   /**

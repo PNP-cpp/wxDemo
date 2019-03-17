@@ -1,0 +1,5 @@
+<!--components/container.wxml-->
+<view class="container" style="height: {{height}};" >
+<slot>
+</slot>
+</view>

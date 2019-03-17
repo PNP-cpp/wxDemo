@@ -1,0 +1,7 @@
+/* components/container.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color:red;
+  box-sizing: border-box;
+} 

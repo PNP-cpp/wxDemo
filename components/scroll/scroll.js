@@ -1,5 +1,6 @@
 // components/scroll/scroll.js
-const order = ['red', 'yellow', 'blue', 'green', 'red']
+const order = ['red', 'yellow', 'blue', 'green', 'red'];
+const app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -13,7 +14,8 @@ Component({
    */
   data: {
     toView: 'red',
-    scrollTop: 100
+    scrollTop: 100,
+    height: app.globalData.containterHeight
   },
   /**
    * 组件的方法列表

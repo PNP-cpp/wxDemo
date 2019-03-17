@@ -32,12 +32,31 @@ App({
         }
       }
     })
-    // 获取右上角胶囊位置信息
+    //获取版本号信息
     const version = wx.getSystemInfoSync().SDKVersion;
+    // 获取右上角胶囊位置信息
     this.globalData.getMenuButtonBoundingClientRect =  wx.getMenuButtonBoundingClientRect();
+    //获取设备信息
+    try {
+      const res = wx.getSystemInfoSync();
+      this.globalData.getSystemInfo = res;
+      console.log(res.model)
+      console.log(res.pixelRatio)
+      console.log(res.windowWidth)
+      console.log(res.windowHeight)
+      console.log(res.language)
+      console.log(res.version)
+      console.log(res.platform)
+    } catch (e) {
+      // Do something when catch error
+    }
+    // 容器高度
+    this.globalData.containterHeight =this.globalData.getSystemInfo.windowHeight - this.globalData.getMenuButtonBoundingClientRect.bottom +'px';
   },
   globalData: {
     userInfo: null,
-    getMenuButtonBoundingClientRect:null
+    getMenuButtonBoundingClientRect:null,
+    getSystemInfo:null,
+    containterHeight:null
   }
 })
