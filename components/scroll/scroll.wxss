@@ -1,0 +1,13 @@
+/* components/scroll/scroll.wxss */
+.scroll-view-item{
+  height: 300rpx;
+}
+.bc_green{
+  background-color:green; 
+}
+.bc_yellow{
+background-color:yellow; 
+}
+.bc_blue{
+  background-color:blue; 
+}

@@ -1,5 +1,14 @@
-<navigationBar text='{{text}}'></navigationBar> 
+<navigationBar text='{{text}}'></navigationBar>
 <!--index.wxml-->
 <view class="container">
-
+  <scroll>
+    <view>
+    <input placeholder='搜索'></input>
+      <view class="orderList">
+        <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+          <view>{{itemName.text}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll>
 </view>

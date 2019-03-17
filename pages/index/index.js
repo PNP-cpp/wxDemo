@@ -9,7 +9,8 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     globalData: app.globalData,
-    text:"外卖"
+    text:"外卖",
+    array:[]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -18,6 +19,15 @@ Page({
     })
   },
   onLoad: function () {
+    let array = [];
+    for(let i = 0 ; i < 100; i++){
+      array.push({
+        text:"商品"+i
+      });
+    }
+    this.setData({
+      array: array
+    });
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
