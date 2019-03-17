@@ -1,3 +1,4 @@
+<navigationBar text='{{text}}'></navigationBar> 
 <!--index.wxml-->
 <view class="container">
   <view class="orderList">

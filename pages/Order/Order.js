@@ -1,6 +1,7 @@
 Page({
   data: {
-    myOrderList: []
+    myOrderList: [],
+    text:"订单"
   },
   onLoad: function () {
     this.setData({

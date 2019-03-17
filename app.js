@@ -32,8 +32,12 @@ App({
         }
       }
     })
+    // 获取右上角胶囊位置信息
+    const version = wx.getSystemInfoSync().SDKVersion;
+    this.globalData.getMenuButtonBoundingClientRect =  wx.getMenuButtonBoundingClientRect();
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    getMenuButtonBoundingClientRect:null
   }
 })

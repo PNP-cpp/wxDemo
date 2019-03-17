@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.1.0",
 	"appid": "wx39b8c523885e01c4",
 	"projectname": "wxDemo",
 	"debugOptions": {

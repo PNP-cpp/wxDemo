@@ -1,0 +1,4 @@
+<!--pages/navigationBar/navigayionBar.wxml-->
+<view class="container" style="height:{{height}}px">
+<text class="navText">{{text}}</text>
+</view>

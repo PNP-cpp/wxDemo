@@ -1,0 +1,5 @@
+<navigationBar text='{{text}}'></navigationBar>
+<!--pages/user/user.wxml-->
+<view class="container">
+
+</view>

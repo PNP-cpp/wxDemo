@@ -7,7 +7,9 @@ Page({
     motto: 'Hello ddWorld',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    globalData: app.globalData,
+    text:"外卖"
   },
   //事件处理函数
   bindViewTap: function() {

@@ -1,0 +1,11 @@
+/* pages/navigationBar/navigayionBar.wxss */
+.container{
+  height: 100%;
+  background:#1296db;
+  position: relative;
+}
+.navText{
+  font-size: 31rpx;
+  position:absolute;
+  bottom: 0;
+}
