@@ -1,0 +1,6 @@
+/* components/panel/panel.wxss */
+.myPanel{
+  padding:15rpx; 
+  background-color: #fff;
+  margin-bottom:15rpx; 
+}

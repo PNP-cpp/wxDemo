@@ -1,2 +1,5 @@
 {
+  "usingComponents": {
+    "myPanel": "../../components/panel/panel"
+  }
 }

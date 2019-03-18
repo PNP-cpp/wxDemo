@@ -1,0 +1,4 @@
+<!--components/panel/panel.wxml-->
+<view class="myPanel">
+<slot></slot>
+</view>

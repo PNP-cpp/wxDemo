@@ -1,16 +1,22 @@
 <navigationBar text='{{text}}'></navigationBar>
 <!--index.wxml-->
-<topSwiper></topSwiper>
 <containter>
   <view>
     <scroll>
       <view>
-        <input placeholder='搜索'></input>
-        <view class="orderList">
-          <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
-            <view>{{itemName.text}}</view>
+        <myPanel>
+          <topSwiper></topSwiper>
+        </myPanel>
+        <myPanel>
+        好货拼团
+        </myPanel>
+        <myPanel>
+          <view class="orderList">
+            <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+              <view>{{itemName.text}}</view>
+            </view>
           </view>
-        </view>
+        </myPanel>
       </view>
     </scroll>
   </view>
