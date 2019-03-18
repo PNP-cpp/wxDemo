@@ -1,1 +1,6 @@
 /* pages/components/swiper.wxss */
+.slide-image{
+  display:inline-block;
+  width:100%;
+  height:150px;
+}

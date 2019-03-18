@@ -1,7 +1,7 @@
 /* pages/navigationBar/navigayionBar.wxss */
 .container{
   height: 100%;
-  background:#1296db;
+  background:#fff;
   position: relative;
 }
 .navText{

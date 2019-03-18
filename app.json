@@ -40,6 +40,7 @@
   "usingComponents": {
     "navigationBar": "components/navigationBar/navigayionBar",
     "scroll": "components/scroll/scroll",
-    "containter": "components/containter/containter"
+    "containter": "components/containter/containter",
+    "topSwiper": "components/swiper/swiper"
   }
 }

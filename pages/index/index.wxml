@@ -1,5 +1,6 @@
 <navigationBar text='{{text}}'></navigationBar>
 <!--index.wxml-->
+<topSwiper></topSwiper>
 <containter>
   <view>
     <scroll>

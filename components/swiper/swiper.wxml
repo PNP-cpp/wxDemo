@@ -4,9 +4,9 @@
   interval="{{interval}}"
   duration="{{duration}}"
 >
-  <block wx:for="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}" wx:for-index="idx" wx:for-item="itemName">
     <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150" />
+      <image src="{{itemName}}" class="slide-image"/>
     </swiper-item>
   </block>
 </swiper>

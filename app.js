@@ -51,12 +51,13 @@ App({
       // Do something when catch error
     }
     // 容器高度
-    this.globalData.containterHeight =this.globalData.getSystemInfo.windowHeight - this.globalData.getMenuButtonBoundingClientRect.bottom +'px';
+    this.globalData.containterHeight = this.globalData.getSystemInfo.windowHeight - this.globalData.getMenuButtonBoundingClientRect.bottom - this.globalData.topSwiperHeight +'px';
   },
   globalData: {
     userInfo: null,
     getMenuButtonBoundingClientRect:null,
     getSystemInfo:null,
-    containterHeight:null
+    containterHeight:null,
+    topSwiperHeight:"150"
   }
 })
