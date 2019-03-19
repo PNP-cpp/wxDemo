@@ -1,6 +1,20 @@
 //app.js
 App({
   onLaunch: function () {
+    //获取设备信息
+    try {
+      const res = wx.getSystemInfoSync();
+      this.globalData.getSystemInfo = res;
+      console.log(res.model)
+      console.log(res.pixelRatio)
+      console.log(res.windowWidth)
+      console.log(res.windowHeight)
+      console.log(res.language)
+      console.log(res.version)
+      console.log(res.platform)
+    } catch (e) {
+      // Do something when catch error
+    }
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -32,8 +46,6 @@ App({
         }
       }
     })
-    //获取版本号信息
-    const version = wx.getSystemInfoSync().SDKVersion;
     // 获取右上角胶囊位置信息
     if (wx.getMenuButtonBoundingClientRect) {
       this.globalData.getMenuButtonBoundingClientRect = wx.getMenuButtonBoundingClientRect();
@@ -42,28 +54,16 @@ App({
       var height = this.globalData.getSystemInfo.statusBarHeight + 32;
       if (this.globalData.getSystemInfo.system.indexOf("Android"
       ) !== -1) {
-        this.globalData.navigayionBarHeight = height + 8 + "px";
+        this.globalData.navigayionBarHeight = height + 8;
       } else {
-        this.globalData.navigayionBarHeight = height + 6 + "px";
+        this.globalData.navigayionBarHeight = height + 6;
       }
       this.globalData.getMenuButtonBoundingClientRect = {
-        bottom: Number(this.globalData.navigayionBarHeight)
+        bottom:this.globalData.navigayionBarHeight
       };
+      this.globalData.navigayionBarHeight += "px";
     }
-    //获取设备信息
-    try {
-      const res = wx.getSystemInfoSync();
-      this.globalData.getSystemInfo = res;
-      console.log(res.model)
-      console.log(res.pixelRatio)
-      console.log(res.windowWidth)
-      console.log(res.windowHeight)
-      console.log(res.language)
-      console.log(res.version)
-      console.log(res.platform)
-    } catch (e) {
-      // Do something when catch error
-    }
+    
     // 容器高度
     this.globalData.containterHeight = this.globalData.getMenuButtonBoundingClientRect ? this.globalData.getSystemInfo.windowHeight - this.globalData.getMenuButtonBoundingClientRect.bottom + 'px' :
       this.globalData.getSystemInfo.windowHeight;
