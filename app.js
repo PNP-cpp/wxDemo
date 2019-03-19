@@ -35,7 +35,21 @@ App({
     //获取版本号信息
     const version = wx.getSystemInfoSync().SDKVersion;
     // 获取右上角胶囊位置信息
-    this.globalData.getMenuButtonBoundingClientRect =  wx.getMenuButtonBoundingClientRect();
+    if (wx.getMenuButtonBoundingClientRect) {
+      this.globalData.getMenuButtonBoundingClientRect = wx.getMenuButtonBoundingClientRect();
+      this.globalData.navigayionBarHeight = this.globalData.getMenuButtonBoundingClientRect.bottom +"px";
+    } else {
+      var height = this.globalData.getSystemInfo.statusBarHeight + 32;
+      if (this.globalData.getSystemInfo.system.indexOf("Android"
+      ) !== -1) {
+        this.globalData.navigayionBarHeight = height + 8 + "px";
+      } else {
+        this.globalData.navigayionBarHeight = height + 6 + "px";
+      }
+      this.globalData.getMenuButtonBoundingClientRect = {
+        bottom: Number(this.globalData.navigayionBarHeight)
+      };
+    }
     //获取设备信息
     try {
       const res = wx.getSystemInfoSync();
@@ -51,13 +65,16 @@ App({
       // Do something when catch error
     }
     // 容器高度
-    this.globalData.containterHeight = this.globalData.getSystemInfo.windowHeight - this.globalData.getMenuButtonBoundingClientRect.bottom +'px';
+    this.globalData.containterHeight = this.globalData.getMenuButtonBoundingClientRect ? this.globalData.getSystemInfo.windowHeight - this.globalData.getMenuButtonBoundingClientRect.bottom + 'px' :
+      this.globalData.getSystemInfo.windowHeight;
+    console.log(this.globalData.getSystemInfo);
   },
   globalData: {
     userInfo: null,
-    getMenuButtonBoundingClientRect:null,
-    getSystemInfo:null,
-    containterHeight:null,
-    topSwiperHeight:"150"
+    getMenuButtonBoundingClientRect: null,
+    getSystemInfo: null,
+    containterHeight: null,
+    topSwiperHeight: "150",
+    navigayionBarHeight: "0px"
   }
 })

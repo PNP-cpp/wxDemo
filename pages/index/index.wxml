@@ -6,9 +6,14 @@
       <view>
         <myPanel>
           <topSwiper></topSwiper>
+          <view class="shareServersImgContainter">
+            <view class="shareServersImgItem" wx:for="{{shareServers.imgUrls}}" wx:for-index="idx" wx:for-item="itemName">
+              <image src="{{itemName}}" class="shareServersImgContainter-image" />
+            </view>
+          </view>
         </myPanel>
         <myPanel>
-        好货拼团
+          好货拼团
         </myPanel>
         <myPanel>
           <view class="orderList">

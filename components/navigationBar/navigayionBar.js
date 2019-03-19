@@ -11,11 +11,11 @@ Component({
     }
   },
 
-  /**
+  /**2
    * 组件的初始数据
    */
   data: {
-    height: app.globalData.getMenuButtonBoundingClientRect.bottom +'px'
+    height: app.globalData.navigayionBarHeight
   },
 
   /**
@@ -25,7 +25,7 @@ Component({
 
   },
   created(){
-    console.log(this);
+
   },
   attached(){
     console.log(this);
