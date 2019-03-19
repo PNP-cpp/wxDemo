@@ -23,6 +23,7 @@ Component({
   methods: {
     upper(e) {
       console.log(e)
+      wx.startPullDownRefresh();
     },
     lower(e) {
       console.log(e)

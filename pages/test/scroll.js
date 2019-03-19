@@ -3,7 +3,7 @@
 const app = getApp()
 Page({
   data: {
-    app:app,
+    app: app,
     motto: 'Hello ddWorld',
     userInfo: {},
     hasUserInfo: false,
@@ -21,20 +21,10 @@ Page({
       url: '../Order/Order'
     })
   },
-  onPullDownRefresh() {
-    wx.showNavigationBarLoading() //在标题栏中显示加载
-
-    //模拟加载
-    setTimeout(function () {
-      // complete
-      wx.hideNavigationBarLoading() //完成停止加载
-      wx.stopPullDownRefresh() //停止下拉刷新
-    }, 1500);
-  },
   onLoad: function () {
     // 公共服务人口
     this.setData({
-      shareServers:{
+      shareServers: {
         imgUrls: [
           "../../images/shareServers/meishi.png",
           "../../images/shareServers/meishi.png",

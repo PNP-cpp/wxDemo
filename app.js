@@ -47,26 +47,20 @@ App({
       }
     })
     // 获取右上角胶囊位置信息
-    if (wx.getMenuButtonBoundingClientRect) {
-      this.globalData.getMenuButtonBoundingClientRect = wx.getMenuButtonBoundingClientRect();
-      this.globalData.navigayionBarHeight = this.globalData.getMenuButtonBoundingClientRect.bottom +"px";
+    var height = this.globalData.getSystemInfo.statusBarHeight + 32;
+    if (this.globalData.getSystemInfo.system.indexOf("Android"
+    ) !== -1) {
+      this.globalData.navigayionBarHeight = height + 8;
     } else {
-      var height = this.globalData.getSystemInfo.statusBarHeight + 32;
-      if (this.globalData.getSystemInfo.system.indexOf("Android"
-      ) !== -1) {
-        this.globalData.navigayionBarHeight = height + 8;
-      } else {
-        this.globalData.navigayionBarHeight = height + 6;
-      }
-      this.globalData.getMenuButtonBoundingClientRect = {
-        bottom:this.globalData.navigayionBarHeight
-      };
-      this.globalData.navigayionBarHeight += "px";
+      this.globalData.navigayionBarHeight = height + 6;
     }
-    
-    // 容器高度
+    this.globalData.getMenuButtonBoundingClientRect = {
+      bottom: this.globalData.navigayionBarHeight
+    };
+    this.globalData.navigayionBarHeight += "px";
+        // 容器高度
     this.globalData.containterHeight = this.globalData.getMenuButtonBoundingClientRect ? this.globalData.getSystemInfo.windowHeight - this.globalData.getMenuButtonBoundingClientRect.bottom + 'px' :
-      this.globalData.getSystemInfo.windowHeight;
+      this.globalData.getSystemInfo.windowHeight + 'px';
     console.log(this.globalData.getSystemInfo);
   },
   globalData: {

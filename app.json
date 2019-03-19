@@ -3,10 +3,11 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/Order/Order",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/test/scroll"
   ],
   "tabBar": {
-    "color": "black",
+    "color": "#000",
     "backgroundColor": "#fff",
     "borderStyle": "white",
     "selectedColor": "#1296db",
@@ -18,7 +19,7 @@
         "selectedIconPath": "images/tabBar/homeSelected.png"
       },
       {
-        "pagePath": "pages/Order/Order",
+        "pagePath": "pages/test/scroll",
         "text": "订单",
         "iconPath": "images/tabBar/orderedlist.png",
         "selectedIconPath": "images/tabBar/orderedlistSelected.png"
@@ -32,15 +33,18 @@
     ]
   },
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationStyle": "default",
+    "navigationBarTitleText":"美团",
+    "enablePullDownRefresh":true
   },
   "usingComponents": {
     "navigationBar": "components/navigationBar/navigayionBar",
     "scroll": "components/scroll/scroll",
     "containter": "components/containter/containter",
-    "topSwiper": "components/swiper/swiper"
+    "topSwiper": "components/swiper/swiper",
+    "myPanel": "components/panel/panel"
   }
 }

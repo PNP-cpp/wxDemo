@@ -1,8 +1,7 @@
-<navigationBar text='{{text}}'></navigationBar>
+<!-- <navigationBar text='{{text}}'></navigationBar> -->
 <!--index.wxml-->
 <containter>
   <view>
-    <scroll>
       <view>
         <myPanel>
           <topSwiper></topSwiper>
@@ -23,6 +22,5 @@
           </view>
         </myPanel>
       </view>
-    </scroll>
   </view>
 </containter>
