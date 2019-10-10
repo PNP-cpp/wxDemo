@@ -37,8 +37,8 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
     "navigationStyle": "default",
-    "navigationBarTitleText":"美团",
-    "enablePullDownRefresh":true
+    "navigationBarTitleText": "myIot",
+    "enablePullDownRefresh": true
   },
   "usingComponents": {
     "navigationBar": "components/navigationBar/navigayionBar",
@@ -46,5 +46,6 @@
     "containter": "components/containter/containter",
     "topSwiper": "components/swiper/swiper",
     "myPanel": "components/panel/panel"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
